@@ -1,0 +1,15 @@
+
+.pic{
+    background-image:url("/assets/Capture.PNG");
+    background-size: cover;
+    height: 250px;
+    width: auto;
+}
+
+.shop{
+    height: 340px;
+}
+
+.shop1{
+    height: 300px;
+}

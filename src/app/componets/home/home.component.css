@@ -1,0 +1,155 @@
+
+.pic{
+    background-image:url("/assets/Capture.PNG");
+    background-size: cover;
+    height: 600px;
+    width: auto;
+}
+
+
+.image-hover {
+    width: 192px; /* Specify the width */
+    height: 450px;
+     /* Specify the height */
+    background-image: url('/assets/bedroom.jpg'); /* Initial background image */
+    background-size: cover; /* Cover the entire area of the element */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+    border-radius: 12px;
+  
+}
+
+.image-hover:hover {
+    background-image: url('/assets/pic6.avif'); /* Change on hover */
+    width: 350px; /* Specify the width */
+    height: 500px;
+}
+
+
+.image-hover1 {
+    width: 192px; /* Specify the width */
+    height: 450px; /* Specify the height */
+    background-image: url('/assets/15.avif'); /* Initial background image */
+    background-size: cover; /* Cover the entire area of the element */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+    border-radius: 12px;
+}
+
+.image-hover1:hover {
+    background-image: url('/assets/pic4.avif'); /* Change on hover */
+    width: 350px; /* Specify the width */
+    height: 500px;
+}
+
+
+
+.image-hover2 {
+    width: 192px; /* Specify the width */
+    height: 450px; /* Specify the height */
+    background-image: url('/assets/17.avif'); /* Initial background image */
+    background-size: cover; /* Cover the entire area of the element */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+    border-radius: 12px;
+}
+
+.image-hover2:hover {
+    background-image: url('/assets/pic5.avif'); /* Change on hover */
+    width: 350px; /* Specify the width */
+    height: 500px;
+}
+
+
+.dis{
+    background-image: url('/assets/Capture.PNG');
+    background-size: cover;
+}
+
+.hi{
+    height: 273px;
+}
+
+.tb{
+    width: 580px;
+    height:300px;
+}
+
+.ch{
+    width:650px;
+}
+
+.offer{
+    background-image: url("/assets/offer.jpg");
+    background-size: cover;
+}
+
+.offer1{
+    width: 600px;
+    height: 250px;
+}
+
+
+.count-down-timer {
+  
+    text-align: center;
+    background-color:#fcfcfc;
+    max-width: 400px;
+    margin: 20px auto;
+    color: #d9a74a;
+    border-radius: 6px;
+    padding: 10px;
+    font-family: sans-serif;
+  
+    > p {
+      margin: 5px 0 15px 0;
+    }
+  
+    .wrapper {
+      .description,
+      .times {
+        display: grid;
+        grid-template-columns: repeat(4, calc(12% ));
+        grid-column-gap: 20px;
+      }
+  
+      .description {
+        > p {
+          margin: 0;
+          font: normal 14px roboto;
+        }
+      }
+  
+      .times {
+        p {
+          letter-spacing: -5px;
+          position: relative;
+          margin: 0;
+          font: normal 40px courier, Roboto;
+          ::ng-deep img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            display: block;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 430px) {
+    .count-down-timer {
+      margin: 20px;
+    }
+  }
+  
+
+  .all{
+    width: 750px;
+    height: 450px;
+  }
+
+  .co{
+    width:320px;
+    height: 200px; 
+  }

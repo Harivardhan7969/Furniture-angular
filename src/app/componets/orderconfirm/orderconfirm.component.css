@@ -1,0 +1,21 @@
+#cnt{
+    justify-content: center;
+    justify-items: center;
+    background-color: aqua;
+    
+}
+
+.pic{
+    background-image:url("/assets/Capture.PNG");
+    background-size: cover;
+    height: 250px;
+    width: auto;
+}
+
+.order{
+    width: 600px;
+}
+
+.order1{
+    width: 600px;
+}

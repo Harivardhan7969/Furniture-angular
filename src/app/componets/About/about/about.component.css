@@ -1,0 +1,31 @@
+
+
+.pic{
+    background-image:url("/assets/Capture.PNG");
+    background-size: cover;
+    height: 250px;
+    width: auto;
+}
+
+.img{
+    background-image:url("/assets/Capture2 (2).png");
+    background-size: cover;
+   
+}
+
+.demo{
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:65%;
+   
+  }
+.index{
+width:30%;
+}
+
+.dis{
+    background-image: url('/assets/Capture.PNG');
+    background-size: cover;
+}

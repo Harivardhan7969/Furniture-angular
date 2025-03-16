@@ -1,0 +1,27 @@
+
+.pic{
+    background-image:url("/assets/Capture.PNG");
+    background-size: cover;
+    height: 250px;
+    width: auto;
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .filter-section {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }

@@ -1,0 +1,52 @@
+<div class="flex justify-between px-12 pt-8">
+<div class="flex justify-start relative ">
+    <h2 class="text-3xl font-semibold font-roboto mb-4 text-center">Feature Categories</h2>
+
+  </div>
+      <div class="flex justify-end space-x-4">
+      <div class="bg-[#d09423] w-16 h-10  text-center p-2 rounded-3xl text-white">
+        <button (click)="scrollLeft()"> <--</button>
+      </div>
+
+      <div class="bg-[#d09423] w-16 h-10  text-center p-2 rounded-3xl text-white">
+        <button (click)="scrollRight()"> -></button>
+      </div>
+    </div>
+ </div>   
+
+    
+    <!-- Left Arrow Button -->
+    <!-- <button 
+      (click)="scrollLeft()" 
+      class="  top-1/2 transform -translate-y-1/2 p-2 bg-gray-200 rounded-full shadow-md hover:bg-gray-300 z-10"
+      aria-label="Scroll Left" >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+
+    <button 
+    (click)="scrollRight()" 
+    class="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-200 rounded-full shadow-md hover:bg-gray-300 z-10"
+    aria-label="Scroll Right" >
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
+</div> -->
+
+
+    <!-- Product Carousel -->
+    <div class="overflow-hidden px-12">
+      <div #scrollContainer class="flex space-x-6 overflow-hidden scroll-smooth px-4 mt-4">
+        <div *ngFor="let reddy of reddys" class="flex-none text-center w-40">
+          <div class="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center shadow-md mx-auto">
+            <img  [src]="reddy.image" [alt]="reddy.fullname" class="w-28 h-28 object-cover rounded-full bg-slate-500" routerLink="/product">
+          </div>
+          <h3 class="text-lg font-medium mt-2" >{{ reddy.fullname }}</h3>
+        </div>
+      </div>
+    </div>
+    <!-- Right Arrow Button -->
+   

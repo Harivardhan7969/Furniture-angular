@@ -1,0 +1,16 @@
+.scontainer{
+    backdrop-filter: blur(30px);   
+    box-shadow: 0px 0px 30px rgba(227,228,237,0.37);
+    border: 2px solid rgba(255,255,255,0.18);
+}
+
+h2{
+    /* referring directly to the animation's @keyframe declaration */
+   animation-duration: 3s;
+}
+
+.signup{
+  background-image:  url("/assets/sign.webp");
+  background-repeat: no-repeat;
+background-size: cover;
+}

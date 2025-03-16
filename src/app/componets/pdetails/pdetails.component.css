@@ -1,0 +1,10 @@
+.pic{
+    background-image:url("/assets/Capture.PNG");
+    background-size: cover;
+    height: 250px;
+    width: auto;
+}
+
+:host .mat-tab-label { /* Change tab label color */
+    color: red !important; /* Example: Blue */
+}

@@ -1,0 +1,164 @@
+<app-nav></app-nav>
+
+  <div class="pic flex justify-center pt-16 tracking-tighter">
+    <h1 class="mt-14 font-serif text-white text-3xl">Shopping Cart</h1>
+</div>  
+  
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex justify-around">
+  
+<div class="container mt-32 px-12 justify-between ">
+  <div class="flex  gap-4">
+    <!-- Table -->
+    <div class="flex-1  ">
+      <table class="min-w-full shop bg-gray-100 text-black rounded-lg overflow-hidden">
+        <thead class="bg-[#2b4a49] text-white text-sm leading-normal">
+          <tr>
+            <th class="py-3 px-6 text-left">Product</th>
+            <th class="py-3 px-6 text-left">Price</th>
+            <th class="py-3 px-6 text-left">Quantity</th>
+            <th class="py-3 px-6 text-left">Subtotal</th>
+            <th class="py-3 px-6 text-left"></th>
+          </tr>
+        </thead>
+        <tbody class="text-sm font-light">
+          <tr class="border-b border-gray-200 hover:bg-gray-200">
+            <td class="py-3 px-6 text-left flex items-center">
+              <img src="https://via.placeholder.com/50" alt="Product Image" class="w-10 h-10 mr-2">
+              Nova Nest Chair
+            </td>
+            <td class="py-3 px-6 text-left">$799</td>
+            <td class="py-3 px-6 text-left">
+              <div class="flex items-center bg-white rounded-full overflow-hidden py-1 px-4 ">
+                <button onclick="updateQuantity(this, -1)" class="bg-gray-300 border-none  py-1 px-4 text-black text-lg rounded-full hover:bg-gray-400">-</button>
+                <input type="text" class="text-center  py-1 px-4 text-sm w-10  quantity-input" value="1" >
+                <button onclick="updateQuantity(this, 1)" class="bg-gray-300 border-none py-1 px-4 text-black text-lg rounded-full hover:bg-gray-400">+</button>
+              </div>
+
+            </td>
+            <td class="py-3 px-6 text-left subtotal">$799</td>
+            <td class="py-3 px-6 text-left">
+              <div onclick="removeItem(this)" class="flex items-center justify-center w-6 h-6 border border-black text-black rounded-full cursor-pointer text-base hover:border-gray-800">×</div>
+            </td>
+          </tr>
+          <tr class="border-b border-gray-200 hover:bg-gray-200">
+            <td class="py-3 px-6 text-left flex items-center">
+              <img src="https://via.placeholder.com/50" alt="Product Image" class="w-10 h-10 mr-2">
+              Luna Luxe Chair
+            </td>
+            <td class="py-3 px-6 text-left">$348</td>
+            <td class="py-3 px-6 text-left">
+              <div class="flex items-center bg-white rounded-full overflow-hidden py-1 px-4 ">
+                <button onclick="updateQuantity(this, -1)" class="bg-gray-300 border-none  py-1 px-4 text-black text-lg rounded-full hover:bg-gray-400">-</button>
+                <input type="text" class="text-center  py-1 px-4 text-sm w-10  quantity-input" value="2" >
+                <button onclick="updateQuantity(this, 1)" class="bg-gray-300 border-none py-1 px-4 text-black text-lg rounded-full hover:bg-gray-400">+</button>
+              </div>
+               
+            </td>
+            <td class="py-3 px-6 text-left subtotal">$696</td>
+            <td class="py-3 px-6 text-left">
+              <div onclick="removeItem(this)" class="flex items-center justify-center w-6 h-6 border border-black text-black rounded-full cursor-pointer text-base hover:border-gray-800">×</div>
+            </td>
+          </tr>
+          <tr class="border-b border-gray-200 hover:bg-gray-200">
+            <td class="py-3 px-6 text-left flex items-center">
+              <img src="https://via.placeholder.com/50" alt="Product Image" class="w-10 h-10 mr-2 ">
+              Arm Serenade Chair
+            </td>
+            <td class="py-3 px-6 text-left">$1299</td>
+            <td class="py-3 px-6 text-left">
+              <div class="flex items-center bg-white rounded-full overflow-hidden py-1 px-4 ">
+                <button onclick="updateQuantity(this, -1)" class="bg-gray-300 border-none  py-1 px-4 text-black text-lg rounded-full hover:bg-gray-400">-</button>
+                <input type="text" class="text-center  py-1 px-4 text-sm w-10  quantity-input" value="1" >
+                <button onclick="updateQuantity(this, 1)" class="bg-gray-300 border-none py-1 px-4 text-black text-lg rounded-full hover:bg-gray-400">+</button>
+              </div>
+            </td>
+            <td class="py-3 px-6 text-left subtotal">$1299</td>
+            <td class="py-3 px-6 text-left">
+              <div onclick="removeItem(this)" class="flex items-center justify-center w-6 h-6 border border-black text-black rounded-full cursor-pointer text-base hover:border-gray-800">×</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Order Summary -->
+    <div class="flex-col px-12 ">
+      <div class="bg-[#2b4a49] text-white text-sm font-semibold p-3 rounded-t-lg w-80">
+        Order Summary
+      </div>
+     
+      <div class="bg-gray-100 p-4  rounded-b-lg w-80 shop1">
+        <div class="space-y-4">
+          <div class="flex justify-between">
+          
+            <span class="font-semibold">Subtotal:</span>
+            <span>$2794</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-semibold">Shipping:</span>
+            <span>$20</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="font-semibold text-[#d09423]">Add Coupon Code →</span>
+          </div>
+          <div class= " bg-white p-2 flex justify-between items-center total-box">
+            <span>Total</span>
+            <span>$2814</span>
+          </div>
+        </div>
+        <br>
+        <button  class="w-full block bg-[#d09423] text-white text-center py-2 rounded-full" routerLink="/payment">Procced To CheckOut</button>
+      </div>
+    </div>
+  
+  </div>
+</div>
+
+</body>
+<div class="-mt-32">
+<app-footer></app-footer>
+</div>
+</html>
+
+<script>
+  function updateQuantity(button, increment) {
+    const quantityInput = button.parentElement.querySelector('.quantity-input');
+    const priceElem = button.closest('tr').querySelector('td:nth-child(2)');
+    const subtotalElem = button.closest('tr').querySelector('.subtotal');
+    let quantity = parseInt(quantityInput.value);
+
+    quantity += increment;
+    if (quantity < 1) quantity = 1;
+
+    quantityInput.value = quantity;
+    const price = parseFloat(priceElem.textContent.replace('$', ''));
+    const subtotal = quantity * price;
+    subtotalElem.textContent = `$${subtotal.toFixed(2)}`;
+
+    updateOrderTotal();
+  }
+
+  function updateOrderTotal() {
+    const subtotals = document.querySelectorAll('.subtotal');
+    let total = 0;
+    subtotals.forEach(subtotalElem => {
+      total += parseFloat(subtotalElem.textContent.replace('$', ''));
+    });
+    document.querySelector('.total-box span:last-child').textContent = `$${total.toFixed(2)}`;
+  }
+
+  function removeItem(icon) {
+    const row = icon.closest('tr');
+    row.remove();
+    updateOrderTotal();
+  }
+</script>
+

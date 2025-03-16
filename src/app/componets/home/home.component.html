@@ -1,0 +1,505 @@
+<app-nav></app-nav>
+<div class="pic">
+<div class="flex justify-between items-center px-4 pt-6 ">
+
+  
+</div>
+  
+
+    <div class="flex justify-around px-4 mt-12">
+    <div class="text-justify mt-12" >
+        <div class="bg-slate-400 text-center bg-opacity-20 w-60 font-sans h-8  rounded-2xl text-white tracking-wider "> 
+            <p class="items-center ">FURNITURE DESIGNS IDEAS</p>
+          </div>  
+      <h1 class="text-white font-semibold text-5xl font-roboto ">Modern Interior <br> Design Studio</h1>
+      <p class="text-white font-roboto mt-8">Choosing the right furniture for your home online will add <br>elegance and functionality to your interior while also <br>being cost effective and long lasting.</p>
+      <div class="bg-[#d09423] mt-4 w-40 h-12  text-center p-2 rounded-3xl text-white">
+        <a   href="#register" routerLink="/product">Shop Now -></a>
+      </div>
+     <div class="flex justify-between mt-4 text-white font-roboto">
+        <p>2500+ <br>Unique Styles</p>
+        <p>5000+ <br>Happy Customer</p>
+        <p>3000+ <br>Certified Outlets</p>
+     </div>
+    </div>
+    <div class="flex justify-end space-x-3 text-gray-500 text-center font-roboto " >
+      <div class="relative image-hover font-semibold font-roboto " routerLink="/product">
+        <h2 class="pt-96 font-roboto font-semibold text-2xl text-white ">Bed Room</h2>
+      </div>
+      <div class="relative image-hover1  font-semibold font-roboto" routerLink="/product">
+        
+        <h2 class="pt-96 font-roboto font-semibold text-2xl text-white">Living Room</h2>
+      </div>
+      <div class="relative image-hover2  font-semibold font-roboto" routerLink="/product">
+        <h2 class="pt-96 font-roboto font-semibold text-2xl text-white">Waiting Room</h2>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Free and Fast Delivery -->
+        <div class="bg-white rounded-lg p-6 flex flex-col items-center text-center">
+            <img src="/assets/img.PNG">
+            <h3 class="text-xl font-semibold mb-2 text-gray-700">Fast & Free <br>Shipping</h3>
+        </div>
+        <!-- Easy to Shop -->
+        <div class="bg-white  rounded-lg p-6 flex flex-col items-center text-center">
+          <img src="/assets/img1.PNG">
+            <h3 class="text-xl font-semibold mb-2 text-gray-700">Easy to <br>Shop</h3>
+        </div>
+        <!-- 24/7 Support -->
+        <div class="bg-white  rounded-lg p-6 flex flex-col items-center text-center">
+          <img src="/assets/img2.PNG">
+            <h3 class="text-xl font-semibold mb-2">24/7 <br>Support</h3>
+        </div>
+        <!-- Hassle-Free Returns -->
+        <div class="bg-white  rounded-lg p-6 flex flex-col items-center text-center">
+          <img src="/assets/img3.PNG">
+            <h3 class="text-xl font-semibold mb-2 text-gray-700">Hassle-Free <br> Returns</h3>
+        </div>
+    </div>
+  </div>
+
+  
+
+  <app-trending></app-trending>
+
+
+  <app-features></app-features>
+
+<div class="px-12 mt-12">
+  <div class="flex justify-between ">
+    <div>
+      <h1 class="font-roboto font-semibold text-3xl">Treanding Products <br> For You!</h1>
+    </div>
+    <div class="bg-[#d09423] mt-4 w-40 h-12  text-center p-2 rounded-3xl text-white">
+      <button routerLink="/product">View All Products</button>
+    </div>
+  </div>
+  
+<div class="flex space-x-4 mt-4 mb-4">
+  <p    *ngFor="let room of rooms"
+  (click)="selectRoom(room)"
+  [class]="selectedRoom === room ? 'text-blue-500 underline' : ''"
+  class="text-gray-700 font-medium hover:text-blue-500 focus:outline-none"
+>{{room}}</p>
+ 
+</div>
+ 
+    
+ 
+
+
+ <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+  <!-- Product Card 1 -->
+
+  <div class="border p-4 rounded-3xl w-60 bg-[#f5f5f5] " *ngFor= "let i of product [selectedRoom]">
+    <div class="flex justify-between">
+      <div class="bg-[#0b7e87] text-center w-9 h-6 rounded-full"><p>20%</p></div>
+      <div><img class="w-8" src="/assets/favourite.png" ></div>
+    </div>
+    <div class="flex justify-center">
+    <img [src]=[i.image] alt="Zenith Zephyr Chair" class=" h-36 object-cover mb-4">
+    </div>
+    <div class="bg-[#2b4a49]  rounded-lg  ">
+      <img class="w-12 float-right" src="/assets/carticon.png " >
+    <h3 class="text-md font-robot font-medium mt-2 text-white">{{i.name}}</h3>
+    <p class="text-white">$235.99 <span class="line-through text-white">$255.99</span> </p>
+    
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <div class="flex justify-start space-x-6 px-12 mt-24  " routerLink="/product">
+      
+    <div class="bg-[#f5f5f5] all p-12 rounded-3xl">
+      <div class="flex justify-between ">
+      <div class="">
+        <h1 class="font-medium text-4xl font-roboto">Flash Sale!</h1>
+        <p class="mt-4 text-gray-500">Act fast to grab incredible deals on select<br>
+        furniture pieces in our limited-time flash sale.</p>
+      </div>
+
+      <div class="rounded-full -mt-3">
+        <p class="text-center font-medium ">END TIME</p>
+        <div class="count-down-timer ">
+          
+          <div class="wrapper">
+            <div class="description -mt-3">
+              <p>Days</p>
+              <p>Hours</p>
+              <p class="pl-2">Min</p>
+              <p class="pl-3">Sec</p>
+            </div>
+            <div class="times">
+              <p #days>0</p>
+              <p #hours></p>
+              <p #minutes class=""></p>
+              <p #seconds class="pl-2"></p>
+            </div>
+          </div>
+        </div>
+    
+       </div>
+      </div>
+
+      <div class="flex justify-between ">
+      <div>
+        <img class="w-56" src="/assets/offerr3.png">
+        <p class="pl-20 font-normal font-roboto text-3xl">$599</p>
+      </div>
+
+     
+      <div class="" >
+        <h1 class="font-roboto font-medium text-3xl text-gray-700">Vintage Leather Armchai</h1>
+        <p class="mt-3 text-gray-500 font-robto ">Bring a touch of retro charm to your home <br>
+        with this vintage leather armchair. Studry<br>
+      construction ensures duriability. </p>
+      <div class="bg-[#d09423] mt-4 w-40 h-12  text-center p-2 rounded-3xl text-white">
+        <button>Shop Now -></button>
+      </div>
+      </div>
+      </div>
+
+
+     
+     
+    </div>
+
+    <div class="flex-col space-x-24 ">
+    <div class="flex justify-end ">
+      <div class="flex ">
+      
+        <div class="bg-[#f5f5f5] rounded-xl  justify-center items-center shadow-md   co ">
+
+          <div class=" ml-16">
+          <div class=" w-48  ">
+            <img  src="/assets/offerr1.png">
+          </div>
+          
+          <h3 class="text-lg font-medium font-roboto pl-6 ">Accent Chairs</h3>
+          <div class="bg-[#d09423]  w-40 h-12  text-center p-2 rounded-3xl text-white">
+            
+            <button>Shop Now -></button>
+          </div>
+         </div>
+          
+        </div>
+        </div>
+        </div>
+
+        
+        <div class="flex justify-end mt-12">
+          <div class="flex ">
+            <div class="bg-[#f5f5f5] rounded-xl  justify-center items-center shadow-md   co ">
+
+              <div class=" ml-20 ">
+              <div class=" w-36  ">
+                <img  src="/assets/offerr2.png">
+              </div>
+              
+              <h3 class="text-lg font-medium font-roboto pl-6 ">Accent Chairs</h3>
+              <div class="bg-[#d09423]  w-40 h-12  text-center p-2 rounded-3xl text-white">
+                
+                <button>Shop Now -></button>
+              </div>
+             </div>
+              
+            </div>
+            </div>
+            </div>
+
+</div>
+
+   </div>
+
+
+ 
+     
+  <div class="flex justify-around    px-12 ">
+    <div class="flex justify-center">   
+    <div class="flex justify-center mt-24  ">
+      <div class="bg-transparent offer rounded-xl shadow-md p-6  offer1">
+        <div class="   font-sans    tracking-wider text-sm  font-semibold text-[#2b4a49] mb-2">
+            <p class="items-center text-white rounded-2xl ">Exclusive Offer 15%OFF</p>
+        </div>
+        <h3 class="text-4xl text-white font-medium font-roboto">Best Online <br>
+           Deals, Free Stuff</h3>
+        <p class="text-white mb-6 pt-2">Only on this week... Don't miss</p>
+        <div class="flex">
+          <button
+          class="bg-[#d09423] text-white py-2 px-4 rounded-full hover:bg-yellow-600 transition duration-300"
+        >
+          Get Best Deal
+        </button>
+       </div>
+        
+      </div>
+      </div>
+      </div>
+
+      <div class=" ">
+        <div class="flex justify-center mt-24  ">
+          <div class=" bg-[#eaeae9] rounded-xl shadow-md p-6  offer1">
+            <div class="   font-sans    tracking-wider text-sm  font-semibold text-[#2b4a49] mb-2">
+                <p class="items-center text-black rounded-2xl ">Regular Offer </p>
+            </div>
+            <h3 class="text-4xl text-black font-medium font-roboto">10% Cashback <br>
+               Personal care</h3>
+            <p class="text-black mb-6 ">Max cashback: $12.code:CADHL837</p>
+            <div class="flex">
+              <button
+              class="bg-[#2b4a49] text-white py-2 px-4 rounded-full hover:bg-yellow-600 transition duration-300"
+            >
+              Shop Now ->
+            </button>
+           </div>
+            
+          </div>
+          </div>
+          </div>
+  </div>
+
+
+  <section class="flex-col justify-start  px-12 mt-24">
+    <h2 class="text-3xl font-bold mb-1">Dont't take our word,</h2>
+    <h2 class="text-3xl font-bold mb-1">See what our clients say</h2>
+  </section>
+  
+  <div class="px-12 mt-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="flex bg-transparent dis rounded-lg shadow-md overflow-hidden">
+        <img
+          src="https://media.istockphoto.com/id/1309489745/photo/portrait-of-young-happy-indian-business-man-executive-looking-at-camera-eastern-male.jpg?s=1024x1024&w=is&k=20&c=QGJdZODly1TJgBMMOoqGLP6zVMNp3HCD1gBqENd4wZM="
+          alt="Profile"
+          class="w-56 h-72 object-cover rounded-lg"
+        />
+        <div class="p-6 ">
+          <p class="text-white  text-sm">
+            I recently purchased a beautiful dining set from FurniFlex, and I
+            couldn't be happier! The quality is top-notch, and it looks even
+            better in person than it did online. Plus, the customer service team
+            was incredibly helpful throughout the entire process. Highly
+            recommend.
+          </p>
+          <hr />
+          <p class="mt-4 text-white font-semibold">John D.</p>
+          <p class="text-white text-sm">New York, NY</p>
+        </div>
+      </div>
+  
+      <div class="flex bg-[#eaeae9] rounded-lg shadow-md overflow-hidden">
+        <img
+          src="https://media.istockphoto.com/id/1180926773/photo/studio-waist-up-portrait-of-a-beautiful-businesswoman-with-crossed-arms.jpg?s=1024x1024&w=is&k=20&c=pF6JxNlZNzNfjHqn9f5etoVqRQgHO3-yEFD3MTzsPNU="
+          alt="Profile"
+          class="w-56 h-72 object-cover rounded-lg"
+        />
+        <div class="p-6 w-2/3">
+          <p class="text-black text-sm">
+            I recently purchased a beautiful dining set from FurniFlex, and I
+            couldn't be happier! The quality is top-notch, and it looks even
+            better in person than it did online. Plus, the customer service
+            team...
+          </p>
+          <hr/>
+          <p class="mt-4 text-black font-semibold">Emily K.</p>
+          <p class="text-black text-sm">Los Angeles, CA</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="container mx-auto mt-8 px-12">
+    <div class=" mx-auto mt-14">
+      <h2 class="text-3xl font-semibold font-robot mb-6 text-center">
+        Got Questions? We've <br />
+        Got Answers!
+      </h2>
+      <div *ngFor="let faq of faqs; let i = index">
+        <div
+          class="flex justify-between items-center bg-gray-100 p-4 rounded-lg mb-2 cursor-pointer hover:bg-gray-200"
+          (click)="toggleAnswer(i)"
+        >
+          <h3 class="font-semibold">{{ faq.question }}</h3>
+          <div *ngIf="!faq.showAnswer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg bg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+              </svg>
+          </div>
+          <div *ngIf="faq.showAnswer">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div
+          *ngIf="faq.showAnswer"
+          class="bg-[#2b4a49] text-white p-4 rounded-lg mb-4"
+        >
+          <p>{{ faq.answer }}</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="container mx-auto mt-4 mb-8">
+      <div
+        class="bg-gray-100 p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center w-md" >
+        <div class="md:w-1/2 mb-4 md:mb-0">
+          <h2 class="text-2xl font-bold mb-2">Subscribe To Our Newsletter</h2>
+          <p class="text-gray-600 mb-4">
+            Subscribe to our email newsletter today to receive update<br />
+            on the latest news.
+          </p>
+          <div class="flex items-center">
+            <input
+              type="email"
+              placeholder="Enter your Email"
+              class="flex-grow p-2 border border-gray-300 rounded-full focus:outline-none max-w-sm focus:border-yellow-500"
+            />
+            <button
+              class="bg-yellow-500 text-white p-2 rounded-full hover:bg-yellow-600"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center items-center">
+          <div class="relative">
+            <img
+              src="https://images.pexels.com/photos/7014925/pexels-photo-7014925.jpeg?auto=compress&cs=tinysrgb&w=1250&h=750&dpr=2"
+              alt="Subscription Image"
+              class="rounded-lg shadow-md max-w-sm"
+            />
+            <div
+              class="absolute bottom-2 right-2 bg-white px-2 py-1 rounded-full text-sm font-semibold shadow-md"
+            >
+              29.$
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+<hr>
+<a href="#" class="flex justify-center items-center "> 
+           
+  <img src="assets/image.png" class="h-24 justify-center" alt="FurniFlex Logo">         
+</a>
+<hr/>
+
+    <footer class="bg-white dark:bg-gray-900">
+
+         <div class="flex justify-between mx-12">
+          <div>
+              <h2 class="mb-6 text-lg font-semibold text-gray-900 uppercase dark:text-white">About</h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                  <li class="mb-1">
+                      <a href="#" class="hover:underline">Our Company</a>
+                  </li>
+                  <li class="mb-1">
+                      <a href="#" class="hover:underline">Our Story</a>
+                  </li>
+                 
+                  <li class="mb-1">
+                    <a href="#" class="hover:underline">Blog</a>
+                </li>
+              </ul>
+          </div>
+          <div>
+              <h2 class="mb-6 text-lg font-semibold text-gray-900 uppercase dark:text-white">information</h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                  <li class="mb-1">
+                      <a href="#" class="hover:underline">Delivery information</a>
+                  </li>
+                  <li class="mb-1">
+                      <a href="#" class="hover:underline">pivacy policy</a>
+                  </li>
+                  <li class="mb-1">
+                      <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="#" class="hover:underline">Return</a>
+                </li>
+              </ul>
+          </div>
+          <div>
+              <h2 class="mb-6 text-lg font-semibold text-gray-900 uppercase dark:text-white">Support</h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                  <li class="mb-1">
+                      <a href="#" class="hover:underline">Contact Us</a>
+                  </li>
+                  <li class="mb-1">
+                      <a href="#" class="hover:underline">Help</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="#" class="hover:underline">FAQ</a>
+                </li>
+                <li class="mb-1">
+                  <a href="#" class="hover:underline">Checkout</a>
+              </li>
+                </ul>
+                </div>
+    </div>
+      <div class="px-4 py-6 bg-[#2D5356] md:flex md:items-center border-lg md:justify-between">
+          <span class="text-sm text-black dark:text-gray-300 sm:text-center">© 2023 <a href="https://flowbite.com/">copy rights ©2024 FurniFlex. </a>. All Rights Reserved.
+          </span>
+         
+          <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
+              <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                          <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                      </svg>
+                    <span class="sr-only">Facebook page</span>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                          <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                      </svg>
+                    <span class="sr-only">Discord community</span>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                      <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+                  </svg>
+                    <span class="sr-only">Twitter page</span>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="sr-only">GitHub account</span>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
+                  </svg>
+                    <span class="sr-only">Dribbble account</span>
+                </a>
+          </div>
+        </div>
+    
+  </footer>
+ 
+
+
+  
